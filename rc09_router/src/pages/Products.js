@@ -16,6 +16,7 @@ const Products = () => {
       <h2>Product Page</h2>
       <div className={styles.products}>
         {products.map((each) => (
+          //Bu link in to sunu böyle yazarsak products/details yapıyor . yoksa ana adresin sonuna /details yapıyor
           <Link
             to={`details/${each.id}`}
             key={each.id}
@@ -23,7 +24,7 @@ const Products = () => {
           >
             <h6>{each.category}</h6>
             <p>{each.title}</p>
-            <img style={{ width: "100px" }} src={each.image} alt="" />
+            <img src={each.image} style={{ width: "100px" }} alt="" />
           </Link>
         ))}
       </div>

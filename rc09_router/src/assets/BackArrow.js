@@ -1,3 +1,5 @@
+//*BUNU ELİMİZDE SVG Sİ OLAN HERHANGİ BİR İCONUN svg to react component yazarak googledaki siteden çevirdik
+
 import * as React from "react";
 
 const BackArrow = (props) => (
