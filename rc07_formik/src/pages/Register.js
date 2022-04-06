@@ -49,7 +49,8 @@ function Register() {
     password: ${values.password},
     password2: ${values.password2},
     `);
-    resetForm();
+    resetForm();/* formu resetlemek için */
+
   };
   return (
     <Container
@@ -75,11 +76,11 @@ function Register() {
       </Typography> 
 
       <Formik
-        initialValues={initialValues}
+        initialValues={initialValues} onSubmit = {handleSubmit} validationSchema={signUpValidationSchema}
       >
             
-          {({values,handleChange})=>(
-            <form >
+          {({values,handleChange, handleSubmit, errors, touched, handleBlur})=>(
+            <form onSubmit={handleSubmit}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <TextField
@@ -88,9 +89,9 @@ function Register() {
                   variant="outlined"
                   value={values.username}
                   onChange={handleChange}
-                 /*  helperText={touched.username && errors.username}
+                  helperText={touched.username && errors.username}
                   error={touched.username && Boolean(errors.username)}
-                  onBlur={handleBlur} */
+                  onBlur={handleBlur}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -100,9 +101,9 @@ function Register() {
                   variant="outlined"
                   value={values.email}
                   onChange={handleChange}
-                  /* helperText={touched.email && errors.email}
+                  helperText={touched.email && errors.email}
                   error={touched.email && Boolean(errors.email)}
-                  onBlur={handleBlur} */
+                  onBlur={handleBlur}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -112,9 +113,9 @@ function Register() {
                   value={values.password}
                   onChange={handleChange}
                   type="password"
-                  /* helperText={touched.password && errors.password}
+                  helperText={touched.password && errors.password}
                   error={touched.password && Boolean(errors.password)}
-                  onBlur={handleBlur} */
+                  onBlur={handleBlur}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -125,9 +126,9 @@ function Register() {
                   value={values.password2}
                   onChange={handleChange}
                   type="password"
-                  /* helperText={touched.password2 && errors.password2}
+                  helperText={touched.password2 && errors.password2}
                   error={touched.password2 && Boolean(errors.password2)}
-                  onBlur={handleBlur} */
+                  onBlur={handleBlur}
                 />
               </Grid>
               <Grid item xs={12}>
