@@ -1,5 +1,5 @@
 import './App.css';
-// import WithPropsApp from './withprops/WithPropsApp';
+import WithPropsApp from './withprops/WithPropsApp';
 // import MyApp from './MyApp';
 import WithContextApp from './withcontext/WithContextApp';
 

@@ -11,14 +11,14 @@ const WithPropsApp = () => {
   const [products, setProducts] = useState(initialProducts);
 
   const increasePrice = (event) => {
-    console.log("increasePrice", event.target.id);
+    // console.log("increasePrice", event.target.id);
     const newProducts = [...products];
     newProducts[event.target.id].price += 1
     setProducts(newProducts);
   };
 
   const decreasePrice = (event) => {
-    console.log("decreasePrice");
+    // console.log("decreasePrice");
     const newProducts = [...products];
     newProducts[event.target.id].price -= 1
     setProducts(newProducts);
