@@ -2,7 +2,9 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 const UseRefComponent = () => {
+  //!1. Kullanım
   /* burada useRef bize Queryselector gibi dom elementine ulaşmamızı sağlıyan bir hook */
+  //!2. Kullanım
   /* ikinci olarak da bir object oluşturmamızı sağlar  */
   const [value, setValue] = useState(0);
   // console.log(value);
