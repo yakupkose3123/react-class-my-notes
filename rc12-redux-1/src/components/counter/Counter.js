@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { decrease, increase, reset} from "../../redux/actions/counterActions"
 
 const Counter = () => {
-  const {counter} = useSelector((state) => state.counterReducer)
-  const dispatch = useDispatch()
+  const {counter} = useSelector((state) => state.counterReducer) //useSelector bize state i çağırmaya yarayan bir hook gibi düşün
+  const dispatch = useDispatch(); // buda fonksiyonları çağırmak için kullanılır.
 
   console.log(counter)
   
