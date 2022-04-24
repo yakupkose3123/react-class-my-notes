@@ -42,12 +42,15 @@ const UseRefComponent = () => {
     valueRef.current += 1;
   }
 
+
   return (
     <div ref={divRef} className="useref">
       <h2>UseRef Component</h2>
       <input /* type="color" */ ref={inputRef} placeholder="Enter text..." />
       <button onClick={ChangeBGColor}>ChangeBGColor</button>
+      <h3>{valueRef.current}</h3>
       <button onClick={increase}>INCREASE</button>
+    
     </div>
   );
 };
